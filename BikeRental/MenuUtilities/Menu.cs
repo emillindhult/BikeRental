@@ -3,12 +3,19 @@
 public class Menu
 {
     private ItemCollection menuItems;
+    private Menu? parent;
     private string title;
 
     public Menu(string title)
     {
         menuItems = new ItemCollection();
         this.title = title;
+    }
+
+    public Menu Add(string title, Action action)
+    {
+        menuItems.AddItem(title, action);
+        return this;
     }
 
     public void DisplayMenu()

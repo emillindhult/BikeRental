@@ -16,7 +16,10 @@ public class App
 
     public void Run()
     {
-        var menu = new Menu("Bike Rental");
+        var menu2 = new Menu("Menu 2");
+
+        var menu = new Menu("Bike Rental")
+            .Add("This is an option", () => menu2.Show());
         menu.Show();
     }
 }

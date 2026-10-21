@@ -13,13 +13,18 @@ public class ItemCollection
         _items = [];
 
         if (_items.Count <= 0)
-            _items.Add(new MenuItem("Option 1"));
+            _items.Add(new MenuItem("Option 1", () => Console.WriteLine()));
 
-        _items.Add(new MenuItem("Option 1"));
-        _items.Add(new MenuItem("Option 1"));
-        _items.Add(new MenuItem("Option 1"));
+        _items.Add(new MenuItem("Option 2", () => Console.WriteLine()));
+        _items.Add(new MenuItem("Option 3", () => Console.WriteLine()));
+        _items.Add(new MenuItem("Option 4", () => Console.WriteLine()));
 
         SelectedItem = _items[selectedIndex];
+    }
+
+    public void AddItem(string title, Action action)
+    {
+        _items.Add(new MenuItem(title, action));
     }
 
     public void SelectNextItem()
