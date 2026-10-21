@@ -4,8 +4,8 @@ internal class ElectricBike : BaseBike
 {
     public int Battery { get; private set; }
 
-    public ElectricBike(int id, decimal pricePerHour, bool isFree, int battery)
-        : base(id, pricePerHour, isFree)
+    public ElectricBike(decimal pricePerHour, bool isFree, int battery)
+        : base(pricePerHour, isFree)
     {
         Battery = battery;
     }

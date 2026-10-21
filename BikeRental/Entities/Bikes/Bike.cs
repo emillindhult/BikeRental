@@ -2,8 +2,8 @@
 
 internal class Bike : BaseBike
 {
-    public Bike(int id, decimal pricePerHour, bool isFree)
-        : base(id, pricePerHour, isFree)
+    public Bike(decimal pricePerHour, bool isFree)
+        : base(pricePerHour, isFree)
     {
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BikeRental.Managers;
+using BikeRental.MenuUtilities;
 
 namespace BikeRental;
 
@@ -11,5 +12,11 @@ public class App
     {
         _bikeManager = new BikeManager();
         _customerManager = new CustomerManager();
+    }
+
+    public void Run()
+    {
+        var menu = new Menu("Bike Rental");
+        menu.Show();
     }
 }
