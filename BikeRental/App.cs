@@ -1,5 +1,5 @@
 ﻿using BikeRental.Managers;
-using BikeRental.MenuUtilities;
+using MenuBuilder;
 
 namespace BikeRental;
 
@@ -16,10 +16,10 @@ public class App
 
     public void Run()
     {
-        var menu2 = new Menu("Menu 2");
-
         var menu = new Menu("Bike Rental")
-            .Add("This is an option", () => menu2.Show());
-        menu.Show();
+            .Add("This is an option", () => Console.WriteLine())
+            .Add("Option 2", () => Console.WriteLine());
+
+        menu.Display();
     }
 }

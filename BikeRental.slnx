@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="BikeRental/BikeRental.csproj" />
+  <Project Path="MenuBuilder/MenuBuilder.csproj" Id="ca704e18-e480-4bab-8228-1ed379dce7d3" />
 </Solution>
